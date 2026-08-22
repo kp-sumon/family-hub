@@ -1,1 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Family Hub · Rewards</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="overlay"></div>
 
+  <aside class="sidebar">
+    <a href="index.html" class="brand">
+      <span class="brand-mark">⌂</span>
+      <span><strong>Family Hub</strong><small>Better days together</small></span>
+    </a>
+    <nav class="nav">
+      <a href="index.html"><span class="nav-icon">⌂</span>Dashboard</a>
+      <a href="chores.html"><span class="nav-icon">🧹</span>Chores</a>
+      <a href="rewards.html"><span class="nav-icon">🎁</span>Rewards</a>
+      <a href="planner.html"><span class="nav-icon">📅</span>Planner</a>
+      <a href="tasks.html"><span class="nav-icon">✓</span>Tasks</a>
+    </nav>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <div class="greeting">
+        <button class="mobile-menu" data-menu>☰</button>
+        <small>Celebrate progress</small>
+        <h1>Family rewards</h1>
+      </div>
+      <div class="top-actions">
+        <button class="icon-btn" data-theme-toggle>◐</button>
+        <div class="avatar" data-user-initial>A</div>
+      </div>
+    </header>
+
+    <section class="page">
+      <div class="hero">
+        <div class="hero-content">
+          <p>Your family points balance</p>
+          <h2>245 points ready to become memories.</h2>
+          <p>Choose a reward, celebrate together and keep the good energy going.</p>
+        </div>
+      </div>
+
+      <div class="section-heading">
+        <div>
+          <h2>Available rewards</h2>
+          <p>Little rewards make teamwork more joyful.</p>
+        </div>
+      </div>
+
+      <div class="card-grid" data-rewards-list></div>
+
+      <div class="section-heading">
+        <div>
+          <h2>Create a reward</h2>
+          <p>Add something your family will love.</p>
+        </div>
+      </div>
+
+      <form class="card form-card" data-reward-form>
+        <div class="form-grid">
+          <div class="field">
+            <label for="reward-title">Reward name</label>
+            <input id="reward-title" name="title" required placeholder="e.g. Ice cream night">
+          </div>
+
+          <div class="field">
+            <label for="reward-emoji">Emoji</label>
+            <input id="reward-emoji" name="emoji" placeholder="🍦" maxlength="2">
+          </div>
+
+          <div class="field">
+            <label for="reward-cost">Point cost</label>
+            <input id="reward-cost" name="cost" type="number" min="1" value="50">
+          </div>
+
+          <div class="field" style="align-self:end;">
+            <button class="btn" type="submit">Create reward</button>
+          </div>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
