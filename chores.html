@@ -1,1 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Family Hub · Chores</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="overlay"></div>
 
+  <aside class="sidebar">
+    <a href="index.html" class="brand">
+      <span class="brand-mark">⌂</span>
+      <span><strong>Family Hub</strong><small>Better days together</small></span>
+    </a>
+    <nav class="nav">
+      <a href="index.html"><span class="nav-icon">⌂</span>Dashboard</a>
+      <a href="chores.html"><span class="nav-icon">🧹</span>Chores</a>
+      <a href="rewards.html"><span class="nav-icon">🎁</span>Rewards</a>
+      <a href="planner.html"><span class="nav-icon">📅</span>Planner</a>
+      <a href="tasks.html"><span class="nav-icon">✓</span>Tasks</a>
+    </nav>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <div class="greeting">
+        <button class="mobile-menu" data-menu>☰</button>
+        <small>Organize your home</small>
+        <h1>Shared chores</h1>
+      </div>
+      <div class="top-actions">
+        <button class="icon-btn" data-theme-toggle>◐</button>
+        <div class="avatar" data-user-initial>A</div>
+      </div>
+    </header>
+
+    <section class="page">
+      <div class="section-heading">
+        <div>
+          <h2>Chore board</h2>
+          <p>Share the work, celebrate the progress.</p>
+        </div>
+        <select class="field input" data-chore-filter style="width: auto; padding: 10px 13px;">
+          <option value="all">All chores</option>
+          <option value="pending">Pending</option>
+          <option value="done">Completed</option>
+        </select>
+      </div>
+
+      <div class="list" data-chores-list></div>
+
+      <div class="section-heading">
+        <div>
+          <h2>Add a chore</h2>
+          <p>Create a simple responsibility for your family.</p>
+        </div>
+      </div>
+
+      <form class="card form-card" data-chore-form>
+        <div class="form-grid">
+          <div class="field full">
+            <label for="chore-title">Chore title</label>
+            <input id="chore-title" name="title" required placeholder="e.g. Fold the laundry">
+          </div>
+
+          <div class="field">
+            <label for="assignee">Assigned to</label>
+            <input id="assignee" name="assignee" required placeholder="Family member">
+          </div>
+
+          <div class="field">
+            <label for="due">Due</label>
+            <input id="due" name="due" placeholder="Today or Friday">
+          </div>
+
+          <div class="field">
+            <label for="points">Points</label>
+            <input id="points" name="points" type="number" min="1" value="10">
+          </div>
+
+          <div class="field" style="align-self:end;">
+            <button class="btn" type="submit">Add chore</button>
+          </div>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
