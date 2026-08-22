@@ -1,1 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Family Hub · Planner</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="overlay"></div>
 
+  <aside class="sidebar">
+    <a href="index.html" class="brand">
+      <span class="brand-mark">⌂</span>
+      <span><strong>Family Hub</strong><small>Better days together</small></span>
+    </a>
+    <nav class="nav">
+      <a href="index.html"><span class="nav-icon">⌂</span>Dashboard</a>
+      <a href="chores.html"><span class="nav-icon">🧹</span>Chores</a>
+      <a href="rewards.html"><span class="nav-icon">🎁</span>Rewards</a>
+      <a href="planner.html"><span class="nav-icon">📅</span>Planner</a>
+      <a href="tasks.html"><span class="nav-icon">✓</span>Tasks</a>
+    </nav>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <div class="greeting">
+        <button class="mobile-menu" data-menu>☰</button>
+        <small>Make time for what matters</small>
+        <h1>Family planner</h1>
+      </div>
+      <div class="top-actions">
+        <button class="icon-btn" data-theme-toggle>◐</button>
+        <div class="avatar" data-user-initial>A</div>
+      </div>
+    </header>
+
+    <section class="page">
+      <div class="section-heading">
+        <div>
+          <h2>Upcoming events</h2>
+          <p>Keep everyone aligned and prepared.</p>
+        </div>
+      </div>
+
+      <div class="list" data-planner-list></div>
+
+      <div class="section-heading">
+        <div>
+          <h2>Add an event</h2>
+          <p>Plan appointments, activities and family moments.</p>
+        </div>
+      </div>
+
+      <form class="card form-card" data-planner-form>
+        <div class="form-grid">
+          <div class="field full">
+            <label for="event-title">Event title</label>
+            <input id="event-title" name="title" required placeholder="e.g. Family dinner">
+          </div>
+
+          <div class="field">
+            <label for="event-date">Date</label>
+            <input id="event-date" name="date" type="date" required>
+          </div>
+
+          <div class="field">
+            <label for="event-time">Time</label>
+            <input id="event-time" name="time" type="time" required>
+          </div>
+
+          <div class="field">
+            <label for="event-category">Category</label>
+            <select id="event-category" name="category">
+              <option>Family</option>
+              <option>School</option>
+              <option>Work</option>
+              <option>Important</option>
+            </select>
+          </div>
+
+          <div class="field" style="align-self:end;">
+            <button class="btn" type="submit">Add event</button>
+          </div>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
