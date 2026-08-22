@@ -1,1 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Family Hub — organize your family life beautifully.">
+  <title>Family Hub · Home</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="overlay"></div>
 
+  <aside class="sidebar">
+    <a href="index.html" class="brand">
+      <span class="brand-mark">⌂</span>
+      <span>
+        <strong>Family Hub</strong>
+        <small>Better days together</small>
+      </span>
+    </a>
+
+    <nav class="nav">
+      <a href="index.html"><span class="nav-icon">⌂</span>Dashboard</a>
+      <a href="chores.html"><span class="nav-icon">🧹</span>Chores</a>
+      <a href="rewards.html"><span class="nav-icon">🎁</span>Rewards</a>
+      <a href="planner.html"><span class="nav-icon">📅</span>Planner</a>
+      <a href="tasks.html"><span class="nav-icon">✓</span>Tasks</a>
+    </nav>
+
+    <div class="sidebar-bottom">
+      <div class="mini-card">
+        <p>This week's family goal</p>
+        <strong>Keep growing 🌱</strong>
+        <div class="progress"><span></span></div>
+      </div>
+    </div>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <div class="greeting">
+        <button class="mobile-menu" data-menu aria-label="Open menu">☰</button>
+        <small>Good morning, <span data-user-name>Alex Rahman</span></small>
+        <h1>Family dashboard</h1>
+      </div>
+
+      <div class="top-actions">
+        <button class="icon-btn" data-theme-toggle aria-label="Toggle theme">◐</button>
+        <div class="avatar" data-user-initial>A</div>
+      </div>
+    </header>
+
+    <section class="page" data-dashboard>
+      <div class="hero">
+        <div class="hero-content">
+          <p>Saturday, August 22, 2026</p>
+          <h2>Small moments create a beautiful family life.</h2>
+          <p>Stay connected, share responsibilities and celebrate every little win together.</p>
+          <a href="planner.html" class="btn" style="margin-top: 24px;">Open family planner →</a>
+        </div>
+
+        <div class="hero-visual">
+          <div class="family-orbit">
+            <span class="orbit-item">👩</span>
+            <span class="orbit-item">👨</span>
+            <span class="orbit-item">🧒</span>
+            <span class="orbit-item">🐶</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="stats-grid">
+        <article class="stat-card">
+          <div class="stat-top"><span>Completed chores</span><span class="stat-icon">✓</span></div>
+          <h3 data-completed>0</h3>
+          <small>Great teamwork</small>
+        </article>
+
+        <article class="stat-card">
+          <div class="stat-top"><span>Pending chores</span><span class="stat-icon">🧹</span></div>
+          <h3 data-pending>0</h3>
+          <small>Keep going</small>
+        </article>
+
+        <article class="stat-card">
+          <div class="stat-top"><span>Upcoming events</span><span class="stat-icon">📅</span></div>
+          <h3 data-upcoming>0</h3>
+          <small>Plan together</small>
+        </article>
+
+        <article class="stat-card">
+          <div class="stat-top"><span>Weekly progress</span><span class="stat-icon">↗</span></div>
+          <h3>68%</h3>
+          <small>On track</small>
+        </article>
+      </div>
+
+      <div class="section-heading">
+        <div>
+          <h2>Family shortcuts</h2>
+          <p>Everything you need, one tap away.</p>
+        </div>
+      </div>
+
+      <div class="card-grid">
+        <article class="card feature-card">
+          <div class="emoji">🧹</div>
+          <h3>Shared chores</h3>
+          <p>Make everyday responsibilities simple and fair.</p>
+          <a href="chores.html">Manage chores →</a>
+        </article>
+
+        <article class="card feature-card">
+          <div class="emoji">🎁</div>
+          <h3>Celebrate wins</h3>
+          <p>Turn completed tasks into meaningful family rewards.</p>
+          <a href="rewards.html">View rewards →</a>
+        </article>
+
+        <article class="card feature-card">
+          <div class="emoji">📅</div>
+          <h3>Plan together</h3>
+          <p>Keep important moments visible for everyone.</p>
+          <a href="planner.html">Open planner →</a>
+        </article>
+      </div>
+
+      <div class="section-heading">
+        <div>
+          <h2>Recent family activity</h2>
+          <p>Your latest updates in one place.</p>
+        </div>
+        <a href="tasks.html" class="btn secondary small">View all</a>
+      </div>
+
+      <div class="list" data-recent-list></div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
