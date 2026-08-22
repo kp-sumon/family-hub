@@ -1,1 +1,97 @@
 
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Family Hub · Tasks</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="overlay"></div>
+
+  <aside class="sidebar">
+    <a href="index.html" class="brand">
+      <span class="brand-mark">⌂</span>
+      <span><strong>Family Hub</strong><small>Better days together</small></span>
+    </a>
+    <nav class="nav">
+      <a href="index.html"><span class="nav-icon">⌂</span>Dashboard</a>
+      <a href="chores.html"><span class="nav-icon">🧹</span>Chores</a>
+      <a href="rewards.html"><span class="nav-icon">🎁</span>Rewards</a>
+      <a href="planner.html"><span class="nav-icon">📅</span>Planner</a>
+      <a href="tasks.html"><span class="nav-icon">✓</span>Tasks</a>
+    </nav>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <div class="greeting">
+        <button class="mobile-menu" data-menu>☰</button>
+        <small>Stay focused together</small>
+        <h1>Family tasks</h1>
+      </div>
+      <div class="top-actions">
+        <button class="icon-btn" data-theme-toggle>◐</button>
+        <div class="avatar" data-user-initial>A</div>
+      </div>
+    </header>
+
+    <section class="page">
+      <div class="section-heading">
+        <div>
+          <h2>Task list</h2>
+          <p>Capture the things that keep family life moving.</p>
+        </div>
+
+        <select data-task-filter style="padding: 10px 13px; color: var(--text); background: var(--surface-strong); border: 1px solid var(--line); border-radius: 12px;">
+          <option value="all">All tasks</option>
+          <option value="open">Open</option>
+          <option value="done">Completed</option>
+          <option value="high">High priority</option>
+          <option value="medium">Medium priority</option>
+          <option value="low">Low priority</option>
+        </select>
+      </div>
+
+      <div class="list" data-tasks-list></div>
+
+      <div class="section-heading">
+        <div>
+          <h2>Add a task</h2>
+          <p>Turn a thought into a clear next step.</p>
+        </div>
+      </div>
+
+      <form class="card form-card" data-task-form>
+        <div class="form-grid">
+          <div class="field full">
+            <label for="task-title">Task title</label>
+            <input id="task-title" name="title" required placeholder="e.g. Call the electrician">
+          </div>
+
+          <div class="field">
+            <label for="task-priority">Priority</label>
+            <select id="task-priority" name="priority">
+              <option value="high">High</option>
+              <option value="medium" selected>Medium</option>
+              <option value="low">Low</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="task-due">Due</label>
+            <input id="task-due" name="due" placeholder="Today or next week">
+          </div>
+
+          <div class="field" style="align-self:end;">
+            <button class="btn" type="submit">Add task</button>
+          </div>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
